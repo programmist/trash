@@ -15,9 +15,6 @@ def listTrashContents(trash_dir):
     print "\n".join(os.listdir(trash_dir))
 
 if __name__ == "__main__":
-    # The first argument of sys.argv is always the filename,
-    # meaning that the length of system arguments will be
-    # more than one, when command-line arguments exist.
     if len(sys.argv) > 1:
         trash_dir = os.environ['HOME'] + "/.Trash"
         if sys.argv[1] == "--list":
